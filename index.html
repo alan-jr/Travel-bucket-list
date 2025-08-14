@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Bucket List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+            color: black;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border: 2px solid black;
+        }
+        
+        header {
+            text-align: center;
+            color: black;
+            border-bottom: 3px solid black;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: black;
+            border-left: 4px solid black;
+            padding-left: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: black;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+        
+        .destination-images {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .destination-images img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 3px solid black;
+        }
+        
+        .drop-zone {
+            border: 2px dashed black;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        
+        .form-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: black;
+        }
+        
+        select, input {
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 4px;
+            width: 200px;
+            background-color: white;
+            color: black;
+        }
+        
+        .range-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        audio, video {
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> My Travel Bucket List </h1>
+        </header>
+
+        <section>
+            <h2> Top 5 Dream Destinations</h2>
+            <ol>
+                <li><strong>Switzerland</strong> - Alpine beauty and luxury mountain resorts</li>
+                <li><strong>Brazil</strong> - Vibrant culture, beaches, and Amazon rainforest</li>
+                <li><strong>Barcelona, Spain</strong> - Gothic architecture and Mediterranean charm</li>
+                <li><strong>Japan</strong> - Experience ancient traditions and modern innovation</li>
+                <li><strong>Milan, Italy</strong> - Fashion capital and Renaissance art</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2> Destination Images</h2>
+            <div class="destination-images">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" 
+                     alt="Swiss Alps with snow-capped mountains and lake" 
+                     draggable="true">
+                <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&h=300&fit=crop" 
+                     alt="Christ the Redeemer statue overlooking Rio de Janeiro" 
+                     draggable="true">
+                <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400&h=300&fit=crop" 
+                     alt="Sagrada Familia basilica in Barcelona at sunset" 
+                     draggable="true">
+                <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=400&h=300&fit=crop" 
+                     alt="Mount Fuji in Japan with cherry blossoms" 
+                     draggable="true">
+            </div>
+        </section>
+
+        <section>
+            <h2> Things I Want to Do</h2>
+            <h3>In Switzerland:</h3>
+            <ul>
+                <li>Take the scenic train to Jungfraujoch</li>
+                <li>Visit the Matterhorn mountain</li>
+                <li>Enjoy Swiss chocolate and cheese fondue</li>
+                <li>Go skiing in the Alps</li>
+            </ul>
+            
+            <h3>In Brazil:</h3>
+            <ul>
+                <li>Experience Carnival in Rio de Janeiro</li>
+                <li>Visit Christ the Redeemer statue</li>
+                <li>Explore Amazon rainforest</li>
+                <li>Relax on Copacabana beach</li>
+            </ul>
+            
+            <h3>In Barcelona:</h3>
+            <ul>
+                <li>Visit Camp Nou stadium and FC Barcelona Museum</li>
+                <li>See Sagrada Familia basilica</li>
+                <li>Walk through Park Güell</li>
+                <li>Explore Gothic Quarter</li>
+                <li>Try authentic paella and tapas</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2> Destination Comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Best Time to Visit</th>
+                        <th>Budget (per week)</th>
+                        <th>My Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Switzerland</td>
+                        <td>June-September, December-March</td>
+                        <td>₹2,10,000 - ₹3,35,000</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Brazil</td>
+                        <td>May-October</td>
+                        <td>₹67,000 - ₹1,25,000</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Barcelona, Spain</td>
+                        <td>April-June, September-October</td>
+                        <td>₹1,00,000 - ₹1,67,000</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2> Drag & Drop Zone</h2>
+            <div class="drop-zone">
+                <p><strong> Drop your favorite destination image here!</strong></p>
+                <p>Drag any of your images into this area</p>
+            </div>
+        </section>
+
+        <section>
+            <h2> Plan Your Trip</h2>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="season">Preferred Travel Season:</label>
+                    <select id="season" name="season">
+                        <option value="">Choose a season...</option>
+                        <option value="spring">Spring (March-May)</option>
+                        <option value="summer">Summer (June-August)</option>
+                        <option value="autumn">Autumn (September-November)</option>
+                        <option value="winter">Winter (December-February)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="trip-date">Planned Trip Date:</label>
+                    <input type="date" id="trip-date" name="trip-date">
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Budget Range (per week):</label>
+                    <div class="range-container">
+                        <span>₹42,000</span>
+                        <input type="range" id="budget" name="budget" min="42000" max="420000" value="168000" step="8400">
+                        <span>₹4,20,000</span>
+                    </div>
+                    <p>Current selection: ₹<span id="budget-display">1,68,000</span></p>
+                </div>
+
+                
+                <div class="form-group" style="margin-top: 15px;">
+                    <button id="search-options" style="padding: 8px 15px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Search Options
+                    </button>
+                    <button id="set-reminder" style="padding: 8px 15px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer; margin-left: 10px;">
+                        Set Reminder
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Travel Vibes</h2>
+            <p><strong>Background Music:</strong></p>
+            <audio controls loop>
+                <source src="C:\Users\USER\Desktop\New folder\Heartbeat.mp3" type="audio/mpeg">
+            </audio>
+
+            <p><strong>Travel Inspiration Video:</strong></p>
+            <video controls width="100%" height="300">
+                <source src="C:\Users\USER\Desktop\New folder\Tour of the Newly Renovated Barca Museum.mp4" type="video/mp4">
+            </video>
+        </section>
+
+    </div>
+
+    <script>
+        // Budget display update
+        const budgetSlider = document.getElementById('budget');
+        const budgetDisplay = document.getElementById('budget-display');
+        
+        budgetSlider.addEventListener('input', function() {
+            const value = parseInt(this.value);
+            const formatted = value.toLocaleString('en-IN');
+            budgetDisplay.textContent = formatted;
+        });
+
+        // Search Options Button
+        document.getElementById('search-options').addEventListener('click', function() {
+            const season = document.getElementById('season').value;
+            const tripDate = document.getElementById('trip-date').value;
+            const budget = document.getElementById('budget').value;
+
+            if(season && tripDate && budget) {
+                window.open("https://www.booking.com", "_blank");
+            } else {
+                alert("Please select all trip details before searching.");
+            }
+        });
+
+        // Set Reminder Button
+        document.getElementById('set-reminder').addEventListener('click', function() {
+            const season = document.getElementById('season').value;
+            const tripDate = document.getElementById('trip-date').value;
+            const budget = document.getElementById('budget').value;
+
+            if(season && tripDate && budget) {
+                alert("Reminder added!");
+            } else {
+                alert("Please select all trip details before setting a reminder.");
+            }
+        });
+    </script>
+</body>
+</html>
